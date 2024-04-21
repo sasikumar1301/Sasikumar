@@ -1,0 +1,515 @@
+/* General Styles */
+*{
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  width: 100%;
+  padding: 0;}
+  
+  /* background-image: linear-gradient(to right, #331c52, #291C3A); */
+
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+  padding: 10px;
+  background-image: linear-gradient(to right, #8121D0, #291C3A);
+  color: #fff;
+  font-weight: bold;
+  
+}
+
+.nav-link{
+  color: #ffffff;
+}
+.nav-link:hover{
+  color: steelblue;
+}
+.active{
+  color: #ffffff;
+}
+.right-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  color: white;
+  align-items: flex-end;
+}
+
+.left-nav {
+  flex: 1;
+  justify-content: flex-start;
+
+}
+.left-nav li,
+.right-nav li {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.left-nav li:hover,
+.right-nav li:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content */
+
+.main {
+  color: #ccc;
+  background-color: #e1ebed;
+}
+
+/* Home Section */
+
+.home {
+  height: 100vh;
+  text-align: left;
+  background-image: linear-gradient(to right, #331c52, #291C3A);
+  width: 100%;
+  display: felx;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  
+}
+
+@media (max-width: 480px) {
+  .home{
+    height: 100%;
+  }
+}
+.home-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5%;
+}
+
+
+.h-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 25px;
+}
+
+.head1{
+  font-size: 40px;
+  color: #fff;
+  padding-bottom: 15px;
+
+}
+.head2{
+  font-size: 70px;
+  color: #ddbbfc;
+  padding-bottom: 15px;
+  font-weight: bold;
+
+}
+.head3{
+  font-size: 32px;
+  color: #ffffff;
+  padding-bottom: 15px;
+}
+
+
+.home h1,
+.home h2,
+.home h3 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px 0 0;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  color: #291C3A;
+  text-decoration: none;
+  background-color:  #ddbbfc;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+  background-color:rgba(4, 255, 230, 0.982);
+}
+
+.icon {
+  font-size: 20px;
+  
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-nav,
+  .right-nav {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .right-nav {
+    margin-top: 10px;
+  }
+}
+
+/* Include Font Awesome icons */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+/* Animations (using `animate.css`) */
+
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+.animate__pulse {
+  animation-name: pulse;
+}
+
+/* You might need to include `animate.css` in your project for animations to work */
+.about{
+  
+  margin-left: 5%;
+}
+.about h1{
+  color: #291C3A;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 30px 0 10px;
+}
+.about p{
+  color: #331c52;
+  flex-wrap: wrap;
+  width: 40%;
+}
+.skills{
+  margin-left: 60%;
+}
+.skills h1{
+  color: rgb(21, 1, 36);
+  font-size: 30px;
+  font-weight: 600;
+}
+.skills p{
+  color:#331c52;
+  font-size: 18px;
+  font-weight: 400;
+}
+.s-icons{
+
+  display: flex;
+  flex-wrap: wrap; /* This is the key change */
+  transition: all 0.3s;
+}
+
+.s-icon{
+  height: 60px;
+  width: 60px;
+  background-color: #291C3A;
+
+  margin: 5px;
+  padding: 4px;
+  border-radius: 5px;
+  
+  border-radius: 10px;
+  transition: all .2s;
+}
+@media (max-width: 768px) {
+  .skills{
+    margin-left: 5%;
+  }
+  .about p{
+    width: auto;
+  }
+}
+
+
+
+.projects{
+  margin-left: 5%;
+  padding: 40px 0;
+}
+.ph{
+  color: rgb(21, 1, 36);
+  font-size: 30px;
+  font-weight: 600;
+
+}
+.pp{
+  color:#331c52;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+
+.project-section {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 20px; /* Add padding to ensure space for scrollbar */
+}
+
+.project-card {
+  flex: 0 0 auto; /* Ensure cards don't shrink */
+  width: 250px; /* Fixed width for each card */
+  height: 100%;
+  padding: 15px;
+  margin-right: 20px; /* Add margin between cards */
+  background-color: rgba(200, 241, 237, 0.982);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflow to prevent card expansion */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-title {
+  font-size: 20px; /* Reduce font size for better fit */
+  margin-top: 10px;
+  color: #ff7576;
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Display ellipsis for long titles */
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  color: #d0b200;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link svg {
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    margin-right: 10px; /* Adjust margin for smaller screens */
+  }
+}
+
+
+ /* contact page */
+ .contact-form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .contact-form-container {
+    flex-direction: column; /* Switch to row layout on larger screens */
+  }
+}
+
+.left-side {
+  flex: 1;
+  text-align: center;
+}
+
+.left-side h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #331c52;
+  margin-bottom: 20px;
+  animation: title-animation 2s ease-in-out infinite alternate;
+}
+
+@keyframes title-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-side form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cool{
+  color:crimson;
+
+}
+
+.input-container {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-container label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none; /* Disable resize for textarea */
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+/* Social Media Icons */
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #ccc;
+  margin: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+/* Optional: Form submission animation (replace with your animation library if needed) */
+
+.form-submitted {
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer{
+text-align: center;
+background-image: linear-gradient(to right, #331c52, #291C3A);
+padding: 20px;
+color: #ffffff;
+margin-bottom: -20px;
+}
+.name1{
+  font-family: "Gochi Hand", cursive;
+  font-weight: bold;
+  color: #fff;
+}
+.name{
+  color: aqua;
+  font-family: "Gochi Hand", cursive;
+} 
+.love{
+  color: violet;
+}
+.coffee{
+  color: mediumvioletred;
+}
+
+
+
+
+
+
+
+.pic{
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cardp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 270px;
+  margin-right: 15%;
+  padding: 5px;
+  border-radius: 270px;
+  box-shadow: rgba(4, 255, 230, 0.982) 0 15px 30px -5px;
+
+}
+
+
+@media (max-width: 768px) {
+  .cardp {
+    display: none;
+  }
+}
+
+
+
